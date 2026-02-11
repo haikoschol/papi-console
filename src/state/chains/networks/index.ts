@@ -40,6 +40,12 @@ const networks = {
   Westend,
   Custom: [
     {
+      id: "polkadot-dev-webrtc",
+      display: "Polkadot Dev (WebRTC)",
+      lightclient: true,
+      endpoints: {},
+    } as Network,
+    {
       id: "localhost",
       display: "Localhost",
       lightclient: false,
