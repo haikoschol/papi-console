@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  smoldot: file:../smoldot/wasm-node/javascript
+
 patchedDependencies:
   react18-json-view:
     hash: 18eb0a02f9279644adf5cb880895a0c85bd6a84bb945850a7d29833aa7c4c00c
@@ -2277,6 +2280,7 @@ packages:
 
   '@substrate/light-client-extension-helpers@1.0.0':
     resolution: {integrity: sha512-TdKlni1mBBZptOaeVrKnusMg/UBpWUORNDv5fdCaJklP4RJiFOzBCrzC+CyVI5kQzsXBisZ+2pXm+rIjS38kHg==}
+    version: 1.0.0
     peerDependencies:
       smoldot: 2.x
 
@@ -4045,11 +4049,8 @@ packages:
   slow-redact@0.3.2:
     resolution: {integrity: sha512-MseHyi2+E/hBRqdOi5COy6wZ7j7DxXRz9NkseavNYSvvWC06D8a5cidVZX3tcG5eCW3NIyVU4zT63hw0Q486jw==}
 
-  smoldot@2.0.26:
-    resolution: {integrity: sha512-F+qYmH4z2s2FK+CxGj8moYcd1ekSIKH8ywkdqlOz88Dat35iB1DIYL11aILN46YSGMzQW/lbJNS307zBSDN5Ig==}
-
-  smoldot@2.0.40:
-    resolution: {integrity: sha512-h6XC/kKDLdZBBTI0X8y4ZxmaZ2KYVVB0+5isCQm6j26ljeNjHZUDOV+hf8VyoE23+jg00wrxNJ2IVcIAURxwtg==}
+  smoldot@file:../smoldot/wasm-node/javascript:
+    resolution: {directory: ../smoldot/wasm-node/javascript, type: directory}
 
   sonic-boom@4.2.0:
     resolution: {integrity: sha512-INb7TM37/mAcsGmc9hyyI6+QR3rR1zVRu36B0NeGXKnOOLiZOfER5SA+N7X7k3yUYRzLWafduTDvJAfDswwEww==}
@@ -5329,7 +5330,7 @@ snapshots:
   '@polkadot-api/smoldot@0.3.15(bufferutil@4.1.0)(utf-8-validate@5.0.10)':
     dependencies:
       '@types/node': 24.10.9
-      smoldot: 2.0.40(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      smoldot: file:../smoldot/wasm-node/javascript(bufferutil@4.1.0)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -7519,14 +7520,14 @@ snapshots:
     dependencies:
       '@substrate/connect-extension-protocol': 2.2.2
       '@substrate/connect-known-chains': 1.10.3
-      '@substrate/light-client-extension-helpers': 1.0.0(smoldot@2.0.26(bufferutil@4.1.0)(utf-8-validate@5.0.10))
-      smoldot: 2.0.26(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      '@substrate/light-client-extension-helpers': 1.0.0(smoldot@file:../smoldot/wasm-node/javascript(bufferutil@4.1.0)(utf-8-validate@5.0.10))
+      smoldot: file:../smoldot/wasm-node/javascript(bufferutil@4.1.0)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
     optional: true
 
-  '@substrate/light-client-extension-helpers@1.0.0(smoldot@2.0.26(bufferutil@4.1.0)(utf-8-validate@5.0.10))':
+  '@substrate/light-client-extension-helpers@1.0.0(smoldot@file:../smoldot/wasm-node/javascript(bufferutil@4.1.0)(utf-8-validate@5.0.10))':
     dependencies:
       '@polkadot-api/json-rpc-provider': 0.0.1
       '@polkadot-api/json-rpc-provider-proxy': 0.1.0
@@ -7535,7 +7536,7 @@ snapshots:
       '@substrate/connect-extension-protocol': 2.2.2
       '@substrate/connect-known-chains': 1.10.3
       rxjs: 7.8.2
-      smoldot: 2.0.26(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      smoldot: file:../smoldot/wasm-node/javascript(bufferutil@4.1.0)(utf-8-validate@5.0.10)
     optional: true
 
   '@substrate/ss58-registry@1.51.0': {}
@@ -9702,15 +9703,7 @@ snapshots:
 
   slow-redact@0.3.2: {}
 
-  smoldot@2.0.26(bufferutil@4.1.0)(utf-8-validate@5.0.10):
-    dependencies:
-      ws: 8.19.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-    optional: true
-
-  smoldot@2.0.40(bufferutil@4.1.0)(utf-8-validate@5.0.10):
+  smoldot@file:../smoldot/wasm-node/javascript(bufferutil@4.1.0)(utf-8-validate@5.0.10):
     dependencies:
       ws: 8.19.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
     transitivePeerDependencies:

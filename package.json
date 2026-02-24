@@ -87,6 +87,9 @@
       "@reown/appkit",
       "bufferutil",
       "utf-8-validate"
-    ]
+    ],
+    "overrides": {
+      "smoldot": "file:../smoldot/wasm-node/javascript"
+    }
   }
 }
